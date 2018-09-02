@@ -23,7 +23,14 @@ class Counter extends Component {
         >
           Increment
         </button>
-        {/* <ul>{this.renderTags()}</ul> */}
+        <button
+          onClick={() => {
+            this.props.onDelete(this.props.id);
+          }}
+          className="btn-danger btn-sm m-2"
+        >
+          Delete
+        </button>
       </div>
     );
   }
